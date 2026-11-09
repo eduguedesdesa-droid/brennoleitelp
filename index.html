@@ -119,15 +119,17 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
   padding: 8px 12px 8px 8px; border-radius: 14px;
   font-size: 12px; line-height: 1.2; white-space: nowrap;
 }
-.float b { display: block; font-size: 12.5px; }
+.float b { display: block; font-size: 13px; }
 .float small { color: var(--soft); font-size: 10.5px; }
 .float .ico { width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; background: linear-gradient(135deg, var(--blue), var(--cyan)); flex: none; box-shadow: 0 6px 14px -6px rgba(47,107,255,.9); }
 .float .ico svg { width: 15px; height: 15px; color: #fff; }
-.f1 { left: 4px; top: 40%; }
-.f2 { right: 4px; top: 58%; }
+.f1 { left: 4px; top: 38%; }
+.f2 { right: 4px; top: 50%; }
+.f3 { left: 4px; top: 62%; }
 @media (prefers-reduced-motion: no-preference) {
   .f1 { animation: bob 6s ease-in-out infinite; }
-  .f2 { animation: bob 6s ease-in-out -3s infinite; }
+  .f2 { animation: bob 6s ease-in-out -2s infinite; }
+  .f3 { animation: bob 6s ease-in-out -4s infinite; }
 }
 @keyframes bob { 50% { transform: translateY(-7px); } }
 
@@ -288,7 +290,6 @@ footer { padding-block: 24px; background: var(--bg-2); border-top: 1px solid var
 @media (max-width: 349px) {
   .svcs { grid-template-columns: 1fr; }
   .row2.money { grid-template-columns: 1fr; }
-  .float small { display: none; }
 }
 
 /* ================= DESKTOP ================= */
@@ -303,6 +304,7 @@ footer { padding-block: 24px; background: var(--bg-2); border-top: 1px solid var
   .float .ico { width: 32px; height: 32px; }
   .f1 { left: -10%; top: 34%; }
   .f2 { right: -4%; top: 58%; }
+  .f3 { left: -6%; top: 66%; }
   .hero-copy { margin-top: 0; padding-bottom: 72px; text-align: left; align-items: flex-start; gap: 20px; }
   .lead { font-size: 19px; max-width: 38ch; }
   .hero-ctas { grid-template-columns: auto auto; max-width: none; }
@@ -356,11 +358,15 @@ footer { padding-block: 24px; background: var(--bg-2); border-top: 1px solid var
       <img src="brenno-560.webp" srcset="brenno-560.webp 560w, brenno.webp 820w" sizes="(min-width: 860px) 470px, 100vw" alt="Brenno Leite, consultor financeiro, de terno" width="560" height="887" fetchpriority="high" decoding="async">
       <div class="float glass f1" aria-hidden="true">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></span>
-        <span><b>Casa própria</b><small>consórcio ou financiamento</small></span>
+        <b>Casa própria</b>
       </div>
       <div class="float glass f2" aria-hidden="true">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5v5Z"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></svg></span>
-        <span><b>Carro novo</b><small>financiado ou à vista</small></span>
+        <b>Carro novo</b>
+      </div>
+      <div class="float glass f3" aria-hidden="true">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+        <b>Investimentos</b>
       </div>
     </div>
   </div>
